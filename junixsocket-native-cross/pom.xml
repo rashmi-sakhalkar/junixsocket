@@ -75,7 +75,6 @@
                 <junixsocket.native.aol.llvm>ppc64le-Linux-clang</junixsocket.native.aol.llvm>
                 <junixsocket.install.skip>true</junixsocket.install.skip>
                  <junixsocket.build.directory>${project.build.directory}/junixsocket-native-ppc64le-Linux-clang-llvm</junixsocket.build.directory> 
-               <!--<junixsocket.build.directory>/junixsocket/junixsocket-native/target</junixsocket.build.directory> -->
                 <junixsocket.native.llvm.target>powerpc64le-unknown-linux-gnu</junixsocket.native.llvm.target>
                 <junixsocket.native.jnilib.extension>dll</junixsocket.native.jnilib.extension>
                 <junixsocket.common.classifier.linux.ppc64le>ppc64le-Linux-clang-llvm-jni</junixsocket.common.classifier.linux.ppc64le>
