@@ -109,7 +109,7 @@
           <scope>runtime</scope>
           <optional>true</optional>
         </dependency>
-        <!--
+        
         <dependency>
           <groupId>com.kohlschutter.junixsocket</groupId>
           <artifactId>junixsocket-native</artifactId>
@@ -155,7 +155,7 @@
           <classifier>amd64-Windows10-clang-llvm-jni</classifier>
           <scope>runtime</scope>
           <optional>true</optional>
-        </dependency> -->
+        </dependency> 
       </dependencies>
     </profile>
     <!-- Specify profiles to add particular nars -->
