@@ -57,7 +57,7 @@
         <junixsocket.native.default.linkerName>clang</junixsocket.native.default.linkerName>
       </properties>
     </profile>
-    <!--
+    
     <profile>
       <id>current-arch</id>
       <activation>
@@ -104,7 +104,7 @@
           </plugin>
         </plugins>
       </build>
-    </profile> -->
+    </profile> 
     <profile>
       <id>llvm</id>
       <build>
