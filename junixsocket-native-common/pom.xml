@@ -115,8 +115,8 @@
           <artifactId>junixsocket-native</artifactId>
           <version>${project.version}</version>
           <type>nar</type>
-          <!-- FIXME: in order to build on Linux, change this to x86_64-MacOSX-clang-llvm-jni -->
-          <!-- <classifier>x86_64-MacOSX-clang-jni</classifier>
+         
+          <classifier>x86_64-MacOSX-clang-jni</classifier>
           <scope>runtime</scope>
           <optional>true</optional>
         </dependency>
