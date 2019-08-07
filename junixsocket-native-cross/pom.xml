@@ -83,7 +83,7 @@
               </properties>
             </configuration>
           </execution>
-          
+          <!--
           <execution>
             <id>crosscompile-amd64-Windows10-clang</id>
             <goals>
@@ -238,7 +238,7 @@
                 <ignorant>${ignorant}</ignorant>
               </properties>
             </configuration>
-          </execution>
+          </execution> -->
         </executions>
       </plugin>
 
