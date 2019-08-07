@@ -52,7 +52,7 @@
         <executions>
           
           <execution>
-            <id>crosscompile-powerpc64le-Linux-clang</id>
+            <id>crosscompile-ppc64le-Linux-clang</id>
             <goals>
               <goal>run</goal>
             </goals>
@@ -72,13 +72,13 @@
                 <profile>llvm</profile>
               </profiles>
               <properties>
-                <junixsocket.native.aol.llvm>powerpc64le-Linux-clang</junixsocket.native.aol.llvm>
+                <junixsocket.native.aol.llvm>ppc64le-Linux-clang</junixsocket.native.aol.llvm>
                 <junixsocket.install.skip>true</junixsocket.install.skip>
                  <junixsocket.build.directory>${project.build.directory}/junixsocket-native-ppc64le-Linux-clang-llvm</junixsocket.build.directory> 
                <!--<junixsocket.build.directory>/junixsocket/junixsocket-native/target</junixsocket.build.directory> -->
                 <junixsocket.native.llvm.target>powerpc64le-unknown-linux-gnu</junixsocket.native.llvm.target>
                 <junixsocket.native.jnilib.extension>dll</junixsocket.native.jnilib.extension>
-                <junixsocket.common.classifier.linux.powerpc64le>powerpc64le-Linux-clang-llvm-jni</junixsocket.common.classifier.linux.powerpc64le>
+                <junixsocket.common.classifier.linux.ppc64le>ppc64le-Linux-clang-llvm-jni</junixsocket.common.classifier.linux.ppc64le>
                 <ignorant>${ignorant}</ignorant>
               </properties>
             </configuration>
@@ -247,7 +247,7 @@
         <executions>
           
           <execution>
-            <id>install-powerpc64le-Linux-clang</id>
+            <id>install-ppc64le-Linux-clang</id>
             <phase>install</phase>
             <goals>
               <goal>install-file</goal>
@@ -262,7 +262,7 @@
               <generatePom>false</generatePom>
             </configuration>
           </execution>
-          
+          <!--
           <execution>
             <id>install-amd64-Windows10-clang</id>
             <phase>install</phase>
@@ -342,7 +342,7 @@
               <classifier>aarch64-Linux-clang-llvm-jni</classifier>
               <generatePom>false</generatePom>
             </configuration>
-          </execution>
+          </execution> -->
         </executions>
       </plugin>
     </plugins>
