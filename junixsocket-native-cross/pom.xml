@@ -50,6 +50,39 @@
         <artifactId>maven-invoker-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
+          
+          <execution>
+            <id>crosscompile-powerpc64le-Linux-clang</id>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <skipInvocation>${junixsocket.cross.disabled}</skipInvocation>
+              <noLog>true</noLog>
+              <streamLogs>true</streamLogs>
+              <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+              </goals>
+              <projectsDirectory>${project.basedir}/../</projectsDirectory>
+              <pomIncludes>
+                <pomInclude>junixsocket-native</pomInclude>
+              </pomIncludes>
+              <profiles>
+                <profile>llvm</profile>
+              </profiles>
+              <properties>
+                <junixsocket.native.aol.llvm>powerpc64le-Linux-clang</junixsocket.native.aol.llvm>
+                <junixsocket.install.skip>true</junixsocket.install.skip>
+                <junixsocket.build.directory>${project.build.directory}/junixsocket-native-powerpc64le-Linux-clang-llvm</junixsocket.build.directory>
+                <junixsocket.native.llvm.target>powerpc64le-unknown-linux-gnu</junixsocket.native.llvm.target>
+                <junixsocket.native.jnilib.extension>dll</junixsocket.native.jnilib.extension>
+                <junixsocket.common.classifier.linux.powerpc64le>powerpc64le-Linux-clang-llvm-jni</junixsocket.common.classifier.linux.powerpc64le>
+                <ignorant>${ignorant}</ignorant>
+              </properties>
+            </configuration>
+          </execution>
+          
           <execution>
             <id>crosscompile-amd64-Windows10-clang</id>
             <goals>
@@ -211,6 +244,24 @@
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
         <executions>
+          
+          <execution>
+            <id>install-powerpc64le-Linux-clang</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <file>${project.build.directory}/junixsocket-native-powerpc64le-Linux-clang-llvm/junixsocket-native-${project.version}-powerpc64le-Linux-clang-jni.nar</file>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>junixsocket-native</artifactId>
+              <version>${project.version}</version>
+              <packaging>nar</packaging>
+              <classifier>powerpc64le-Linux-clang-llvm-jni</classifier>
+              <generatePom>false</generatePom>
+            </configuration>
+          </execution>
+          
           <execution>
             <id>install-amd64-Windows10-clang</id>
             <phase>install</phase>
