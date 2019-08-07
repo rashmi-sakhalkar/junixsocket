@@ -75,7 +75,7 @@
               <linker>
                 <prefix>${junixsocket.native.default.toolPath}</prefix>
                 <toolPath></toolPath>
-                <name>${junixsocket.native.default.linkerName}</name>
+                <name>clang</name>
               </linker>
             </configuration>
           </plugin>
