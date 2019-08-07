@@ -82,7 +82,7 @@
               </properties>
             </configuration>
           </execution>
-          <!--
+          
           <execution>
             <id>crosscompile-amd64-Windows10-clang</id>
             <goals>
@@ -237,7 +237,7 @@
                 <ignorant>${ignorant}</ignorant>
               </properties>
             </configuration>
-          </execution> -->
+          </execution> 
         </executions>
       </plugin>
 
@@ -261,7 +261,7 @@
               <generatePom>false</generatePom>
             </configuration>
           </execution>
-          <!--
+          
           <execution>
             <id>install-amd64-Windows10-clang</id>
             <phase>install</phase>
@@ -341,7 +341,7 @@
               <classifier>aarch64-Linux-clang-llvm-jni</classifier>
               <generatePom>false</generatePom>
             </configuration>
-          </execution> -->
+          </execution> 
         </executions>
       </plugin>
     </plugins>
