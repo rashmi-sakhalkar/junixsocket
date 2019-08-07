@@ -252,7 +252,8 @@
               <goal>install-file</goal>
             </goals>
             <configuration>
-              <file>/junixsocket/junixsocket-native/target/junixsocket-native-${project.version}-ppc64le-Linux-clang-jni.nar</file>
+              <file>${project.build.directory}/junixsocket-native-ppc64le-Linux-clang-llvm/junixsocket-native-${project.version}-ppc64le-Linux-clang-jni.nar</file>
+              <!-- <file>/junixsocket/junixsocket-native/target/junixsocket-native-${project.version}-ppc64le-Linux-clang-jni.nar</file> -->
               <groupId>${project.groupId}</groupId>
               <artifactId>junixsocket-native</artifactId>
               <version>${project.version}</version>
