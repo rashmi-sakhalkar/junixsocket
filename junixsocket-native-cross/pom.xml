@@ -74,7 +74,7 @@
               <properties>
                 <junixsocket.native.aol.llvm>powerpc64le-Linux-clang</junixsocket.native.aol.llvm>
                 <junixsocket.install.skip>true</junixsocket.install.skip>
-                 <junixsocket.build.directory>${project.build.directory}/junixsocket-native-powerpc64le-Linux-clang-llvm</junixsocket.build.directory> 
+                 <junixsocket.build.directory>${project.build.directory}/junixsocket-native-ppc64le-Linux-clang-llvm</junixsocket.build.directory> 
                <!--<junixsocket.build.directory>/junixsocket/junixsocket-native/target</junixsocket.build.directory> -->
                 <junixsocket.native.llvm.target>powerpc64le-unknown-linux-gnu</junixsocket.native.llvm.target>
                 <junixsocket.native.jnilib.extension>dll</junixsocket.native.jnilib.extension>
@@ -253,12 +253,12 @@
               <goal>install-file</goal>
             </goals>
             <configuration>
-              <file>/junixsocket/junixsocket-native/target/junixsocket-native-${project.version}-powerpc64le-Linux-clang-jni.nar</file>
+              <file>/junixsocket/junixsocket-native/target/junixsocket-native-${project.version}-ppc64le-Linux-clang-jni.nar</file>
               <groupId>${project.groupId}</groupId>
               <artifactId>junixsocket-native</artifactId>
               <version>${project.version}</version>
               <packaging>nar</packaging>
-              <classifier>powerpc64le-Linux-clang-llvm-jni</classifier>
+              <classifier>ppc64le-Linux-clang-llvm-jni</classifier>
               <generatePom>false</generatePom>
             </configuration>
           </execution>
