@@ -22,7 +22,7 @@
     <!-- <nar.aolProperties>${project.basedir}/aol.properties</nar.aolProperties> -->
 
     <!-- IMPORTANT: junixsocket.native properties that end up in aol.properties:
-      Use CDATA to prevent line breaks when formatting —
+      Use CDATA to prevent line breaks when formatting â
       line breaks will break nar-maven-plugin, and may not trigger an error
     -->
     <junixsocket.native.default.options><![CDATA[-Werror -Wall -Wextra -pedantic -Wno-unused-parameter -fno-strict-overflow]]></junixsocket.native.default.options>
@@ -38,26 +38,6 @@
     <junixsocket.install.skip></junixsocket.install.skip>
   </properties>
   <profiles>
-    
-    <profile>
-      <id>ppc64le-Linux</id>
-      <activation>
-        <os>
-          <arch>ppc64le</arch>
-          <name>Linux</name>
-        </os>
-      </activation>
-      <properties>
-        <!-- Specify "junixsocket.native.aol" to override the architecture
-          AOL for this environment; see nar-maven-plugin for details -->
-        <junixsocket.native.aol>ppc64le-Linux-clang</junixsocket.native.aol>
-        <junixsocket.native.llvm.target>current</junixsocket.native.llvm.target>
-        <junixsocket.native.jnilib.extension>so</junixsocket.native.jnilib.extension>
-        <junixsocket.native.default.toolPath>${junixsocket.native.crossclang.toolPath}</junixsocket.native.default.toolPath>
-        <junixsocket.native.default.linkerName>clang</junixsocket.native.default.linkerName>
-      </properties>
-    </profile>
-    
     <profile>
       <id>current-arch</id>
       <activation>
@@ -75,6 +55,7 @@
               <linker>
                 <prefix>${junixsocket.native.default.toolPath}</prefix>
                 <toolPath></toolPath>
+                <!--<name>${junixsocket.native.default.linkerName}</name>-->
                 <name>clang</name>
               </linker>
             </configuration>
@@ -104,7 +85,7 @@
           </plugin>
         </plugins>
       </build>
-    </profile> 
+    </profile>
     <profile>
       <id>llvm</id>
       <build>
